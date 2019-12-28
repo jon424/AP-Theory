@@ -1,8 +1,7 @@
 import React from 'react';
 import './App.css';
 import './index.css';
-import { Route } from 'react-router-dom';
-import { Link } from 'react-router-dom';
+import { Route, Link, Switch, Router } from 'react-router-dom';
 import Homepage from './Homepage/Homepage';
 import Topics from './Topics/Topics';
 import Quizzes from './Quizzes/Quizzes';
@@ -31,11 +30,14 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    const shuffledAnswerOptions = quizQuestions.map((question) => this.shuffleArray(question.answers));
+    //shuffle function commented out for now...
+    //const shuffledAnswerOptions = quizQuestions.map((question) => this.shuffleArray(question.answers));
 
     this.setState({
       question: quizQuestions[0].question,
-      answerOptions: shuffledAnswerOptions[0]
+      answerOptions: quizQuestions[0].answers,
+      //if shuffle is on, use this next one...
+      //answerOptions: shuffledAnswerOptions[0]
     });
   }
 
@@ -128,6 +130,7 @@ class App extends React.Component {
 
   render() {
     return (
+      
       <div className="App">
         <header className="App-header">
           <ul>
@@ -138,10 +141,10 @@ class App extends React.Component {
           </ul></header>
 
         <main>
-
-          {/*should the quiz be displayed? if state.result has a value, then it will display the result */}
-          {this.state.result ? this.renderResult() : this.renderQuiz()}
-
+          <div>
+            {/*should the quiz be displayed? if state.result has a value, then it will display the result */}
+            {this.state.result ? this.renderResult() : this.renderQuiz()}
+          </div>
 
 
           <Route exact path='/' component={Homepage}>
@@ -164,15 +167,16 @@ class App extends React.Component {
           <Route path='/quizzes' component={Quizzes} >
           </Route>
 
-          <Route path='/quiz' component={Quiz} >
-          </Route>
-
-          <Question content="What is your favorite food?" />
-
-
+          <Switch>
+            <Route path='/quiz' component={Quiz} >
+            </Route>
+          </Switch>
+          
         </main>
       </div>
+
     )
+    
   };
 }
 

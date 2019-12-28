@@ -1,6 +1,8 @@
+import React from 'react';
+import image from '../images/IMG_9794.JPG';
 var quizQuestions = [
   {
-      question: "What franchise would you rather play a game from?",
+      question: <img src={image} alt="question_1" width="50%" height="50%" />,
       answers: [
           {
               type: "Microsoft",

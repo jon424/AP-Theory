@@ -5,6 +5,8 @@ import QuestionCount from './QuestionCount';
 import AnswerOption from './AnswerOption';
 import { CSSTransitionGroup } from 'react-transition-group';
 
+
+
 function Quiz(props) {
 
   function renderAnswerOptions(key) {
@@ -30,7 +32,7 @@ function Quiz(props) {
     transitionAppear
     transitionAppearTimeout={500}
     >
-    
+
     <div key={props.questionId}>
       <QuestionCount
         counter={props.questionId}
