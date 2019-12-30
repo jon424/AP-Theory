@@ -8,9 +8,6 @@ class Homepage extends React.Component {
       <React.Fragment>
 
       <h1>Homepage</h1>
-
-      <Link to="/login" >Login</Link>
-      <Link to="/signup" >Sign Up</Link>
   
 
 

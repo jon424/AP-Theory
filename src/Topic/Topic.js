@@ -1,4 +1,5 @@
 import React from 'react';
+import { Route, Link, Switch, Router } from 'react-router-dom';
 
 class Topic extends React.Component {
   state = {}
@@ -7,6 +8,9 @@ class Topic extends React.Component {
       <React.Fragment>
 
         <h1>A Topic</h1>
+
+
+        <Link to="/">Home</Link>
       
 
 
