@@ -1,0 +1,89 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2511
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 Menlo-Regular;\f1\froman\fcharset0 Times-Roman;}
+{\colortbl;\red255\green255\blue255;\red255\green255\blue255;\red0\green0\blue0;\red183\green111\blue179;
+\red140\green211\blue254;\red194\green126\blue101;\red70\green137\blue204;\red212\green214\blue154;\red202\green202\blue202;
+\red109\green109\blue109;\red0\green0\blue233;}
+{\*\expandedcolortbl;;\cssrgb\c100000\c100000\c100000;\cssrgb\c0\c0\c0;\cssrgb\c77255\c52549\c75294;
+\cssrgb\c61176\c86275\c99608;\cssrgb\c80784\c56863\c47059;\cssrgb\c33725\c61176\c83922;\cssrgb\c86275\c86275\c66667;\cssrgb\c83137\c83137\c83137;
+\cssrgb\c50196\c50196\c50196;\cssrgb\c0\c0\c93333;}
+\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720\sl360\partightenfactor0
+
+\f0\fs24 \cf2 \cb3 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Mario Session\
+AnswerOption.js\
+\
+\pard\pardeftab720\sl360\partightenfactor0
+\cf4 \strokec4 import\cf5 \strokec5  React\cf4 \strokec4  from\cf2 \strokec2  \cf6 \strokec6 'react'\cf2 \strokec2 ;\cb1 \
+\cf4 \cb3 \strokec4 import\cf5 \strokec5  PropTypes\cf4 \strokec4  from\cf2 \strokec2  \cf6 \strokec6 'prop-types'\cf2 \strokec2 ;\cb1 \
+\
+\pard\pardeftab720\sl360\partightenfactor0
+\cf7 \cb3 \strokec7 function\cf2 \strokec2  \cf8 \strokec8 AnswerOption\cf2 \strokec2 (\cf5 \strokec5 props\cf2 \strokec2 ) \{\cb1 \
+\
+\cf7 \cb3 \strokec7   let\cf5 \strokec5  className\cf9 \strokec9  =\cf2 \strokec2  \cf6 \strokec6 "radioCustomButton"\cf2 \strokec2 ;\cb1 \
+\pard\pardeftab720\sl360\partightenfactor0
+\cf4 \cb3 \strokec4   if\cf2 \strokec2  (\cf5 \strokec5 props\cf9 \strokec9 .\cf5 \strokec5 correctAnswer\cf9 \strokec9  ===\cf7 \strokec7  true\cf9 \strokec9  &&\cf5 \strokec5  props\cf9 \strokec9 .\cf5 \strokec5 answer\cf9 \strokec9  ===\cf5 \strokec5  props\cf9 \strokec9 .\cf5 \strokec5 answerType\cf2 \strokec2 ) \{\cb1 \
+\pard\pardeftab720\sl360\partightenfactor0
+\cf5 \cb3 \strokec5     className\cf9 \strokec9  =\cf2 \strokec2  \cf6 \strokec6 "correctAnswer radioCustomButton"\cf2 \cb1 \strokec2 \
+\pard\pardeftab720\sl360\partightenfactor0
+\cf2 \cb3   \}\cf4 \strokec4  else if\cf2 \strokec2  (\cf5 \strokec5 props\cf9 \strokec9 .\cf5 \strokec5 correctAnswer\cf9 \strokec9  ===\cf7 \strokec7  false\cf9 \strokec9  &&\cf5 \strokec5  props\cf9 \strokec9 .\cf5 \strokec5 answer\cf9 \strokec9  ===\cf5 \strokec5  props\cf9 \strokec9 .\cf5 \strokec5 answerType\cf2 \strokec2 )\{\cb1 \
+\pard\pardeftab720\sl360\partightenfactor0
+\cf5 \cb3 \strokec5     className\cf9 \strokec9  =\cf2 \strokec2  \cf6 \strokec6 "falseAnswer radioCustomButton"\cf2 \cb1 \strokec2 \
+\pard\pardeftab720\sl360\partightenfactor0
+\cf2 \cb3   \}\cb1 \
+\pard\pardeftab720\sl360\partightenfactor0
+\cf4 \cb3 \strokec4   return\cf2 \strokec2  (\cb1 \
+\pard\pardeftab720\sl360\partightenfactor0
+\cf2 \cb3     \cf10 \strokec10 <\cf7 \strokec7 li\cf2 \strokec2  \cf5 \strokec5 className\cf9 \strokec9 =\cf6 \strokec6 "answerOption"\cf10 \strokec10 >\cf2 \cb1 \strokec2 \
+\cb3       \cf10 \strokec10 <\cf7 \strokec7 input\cf2 \cb1 \strokec2 \
+\cb3         \cf5 \strokec5 type\cf9 \strokec9 =\cf6 \strokec6 "radio"\cf2 \cb1 \strokec2 \
+\cb3         \cf5 \strokec5 className\cf9 \strokec9 =\cf7 \strokec7 \{\cf5 \strokec5 className\cf7 \strokec7 \}\cf2 \cb1 \strokec2 \
+\cb3         \cf5 \strokec5 name\cf9 \strokec9 =\cf6 \strokec6 "radioGroup"\cf2 \cb1 \strokec2 \
+\cb3         \cf5 \strokec5 checked\cf9 \strokec9 =\cf7 \strokec7 \{\cf5 \strokec5 props\cf9 \strokec9 .\cf5 \strokec5 answerType\cf9 \strokec9  ===\cf5 \strokec5  props\cf9 \strokec9 .\cf5 \strokec5 answer\cf7 \strokec7 \}\cf2 \cb1 \strokec2 \
+\cb3         \cf5 \strokec5 id\cf9 \strokec9 =\cf7 \strokec7 \{\cf5 \strokec5 props\cf9 \strokec9 .\cf5 \strokec5 answerType\cf7 \strokec7 \}\cf2 \cb1 \strokec2 \
+\cb3         \cf5 \strokec5 value\cf9 \strokec9 =\cf7 \strokec7 \{\cf5 \strokec5 props\cf9 \strokec9 .\cf5 \strokec5 answerType\cf7 \strokec7 \}\cf2 \cb1 \strokec2 \
+\cb3         \cf5 \strokec5 disabled\cf9 \strokec9 =\cf7 \strokec7 \{\cf5 \strokec5 props\cf9 \strokec9 .\cf5 \strokec5 answer\cf7 \strokec7 \}\cf2 \cb1 \strokec2 \
+\cb3         \cf5 \strokec5 onChange\cf9 \strokec9 =\cf7 \strokec7 \{\cf5 \strokec5 props\cf9 \strokec9 .\cf5 \strokec5 onAnswerSelected\cf7 \strokec7 \}\cf2 \cb1 \strokec2 \
+\cb3       \cf10 \strokec10 />\cf2 \cb1 \strokec2 \
+\cb3       \cf10 \strokec10 <\cf7 \strokec7 label\cf2 \strokec2  \cf5 \strokec5 className\cf9 \strokec9 =\cf6 \strokec6 "radioCustomLabel"\cf2 \strokec2  \cf5 \strokec5 htmlFor\cf9 \strokec9 =\cf7 \strokec7 \{\cf5 \strokec5 props\cf9 \strokec9 .\cf5 \strokec5 answerType\cf7 \strokec7 \}\cf10 \strokec10 >\cf2 \cb1 \strokec2 \
+\cb3         \cf7 \strokec7 \{\cf5 \strokec5 props\cf9 \strokec9 .\cf5 \strokec5 answerContent\cf7 \strokec7 \}\cf2 \cb1 \strokec2 \
+\cb3       \cf10 \strokec10 </\cf7 \strokec7 label\cf10 \strokec10 >\cf2 \cb1 \strokec2 \
+\cb3     \cf10 \strokec10 </\cf7 \strokec7 li\cf10 \strokec10 >\cf2 \cb1 \strokec2 \
+\cb3   );\cb1 \
+\cb3 \}\cb1 \
+\
+\pard\pardeftab720\sl360\partightenfactor0
+\cf5 \cb3 \strokec5 AnswerOption\cf9 \strokec9 .\cf5 \strokec5 propTypes\cf9 \strokec9  =\cf2 \strokec2  \{\cb1 \
+\pard\pardeftab720\sl360\partightenfactor0
+\cf2 \cb3   \cf6 \strokec6 answerType\cf2 \strokec2 : \cf5 \strokec5 PropTypes\cf9 \strokec9 .\cf5 \strokec5 string\cf9 \strokec9 .\cf5 \strokec5 isRequired\cf2 \strokec2 ,\cb1 \
+\cb3   \cf6 \strokec6 answerContent\cf2 \strokec2 : \cf5 \strokec5 PropTypes\cf9 \strokec9 .\cf5 \strokec5 string\cf9 \strokec9 .\cf5 \strokec5 isRequired\cf2 \strokec2 ,\cb1 \
+\cb3   \cf6 \strokec6 answer\cf2 \strokec2 : \cf5 \strokec5 PropTypes\cf9 \strokec9 .\cf5 \strokec5 string\cf9 \strokec9 .\cf5 \strokec5 isRequired\cf2 \strokec2 ,\cb1 \
+\cb3   \cf6 \strokec6 onAnswerSelected\cf2 \strokec2 : \cf5 \strokec5 PropTypes\cf9 \strokec9 .\cf5 \strokec5 func\cf9 \strokec9 .\cf5 \strokec5 isRequired\cf2 \cb1 \strokec2 \
+\cb3 \};\cb1 \
+\
+\pard\pardeftab720\sl360\partightenfactor0
+\cf4 \cb3 \strokec4 export default\cf5 \strokec5  AnswerOption\cf2 \strokec2 ;\cb1 \
+\
+\
+\pard\pardeftab720\sl360\partightenfactor0
+\cf3 - - - - - - - - - - - - - - - - - - \
+\
+\pard\pardeftab720\sl280\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "https://github.com/gchandrasa/quiz-react"}}{\fldrslt 
+\f1 \cf11 \ul \ulc11 \strokec11 https://github.com/gchandrasa/quiz-react}}
+\f1 \cf11 \ul \ulc11 \strokec11 \
+\
+\pard\pardeftab720\sl280\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "https://mitchgavan.com/react-quiz/"}}{\fldrslt \cf11 \ulc11 https://mitchgavan.com/react-quiz/}}\
+\
+\pard\pardeftab720\sl280\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "https://gettogether.community/coffee-house-coders-royal-oak/"}}{\fldrslt \cf11 \ulc11 https://gettogether.community/coffee-house-coders-royal-oak/}}\
+\
+\pard\pardeftab720\sl280\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "https://courses.thinkful.com/ei-node-postgres-v1/checkpoint/9"}}{\fldrslt \cf11 \ulc11 https://courses.thinkful.com/ei-node-postgres-v1/checkpoint/9}}\
+\
+\pard\pardeftab720\sl280\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "https://gilang.chandrasa.com/blog/build-quiz-app-with-reactjs/"}}{\fldrslt \cf11 \ulc11 https://gilang.chandrasa.com/blog/build-quiz-app-with-reactjs/}}
+\f0 \cf3 \ulnone \strokec2 \
+}

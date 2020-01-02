@@ -5,21 +5,18 @@ import { Route, Link, Switch, Router } from 'react-router-dom';
 import Homepage from './Homepage/Homepage';
 import Topics from './Topics/Topics';
 import Quizzes from './Quizzes/Quizzes';
+import PitchQuiz from './Quiz/PitchQuiz';
+import MajorScalesAndKeySignaturesQuiz from './Quiz/MajorScalesAndKeySignaturesQuiz';
 import Login from './Login/Login';
 import Signup from './Signup/Signup';
 import Topic from './Topic/Topic';
-import MakeQuiz from './Quiz/MakeQuiz';
-import Quiz from './Quiz/Quiz';
-import Question from './Quiz/Question';
-import quizQuestions from './api/quizQuestions';
-import Result from './Quiz/Result';
 
 class App extends React.Component {
-  
+
 
   render() {
     return (
-      
+
       <div className="App">
         <header className="App-header">
           <ul>
@@ -29,40 +26,37 @@ class App extends React.Component {
             <li><Link to="/quizzes" >Quizzes</Link></li>
           </ul></header>
 
-         
 
 
 
-          <Route exact path='/' component={Homepage}>
-          </Route>
 
-          <Route path='/login' component={Login}>
-          </Route>
+        <Route exact path='/' component={Homepage}>
+        </Route>
 
-          <Route path='/signup' component={Signup}>
-          </Route>
+        <Route path='/login' component={Login}>
+        </Route>
 
+        <Route path='/signup' component={Signup}>
+        </Route>
 
-          <Route path='/topics' component={Topics} >
-          </Route>
+        <Route path='/topics' component={Topics} >
+        </Route>
 
-          <Route path='/topic' component={Topic} >
-          </Route>
+        <Route path='/topic' component={Topic} >
+        </Route>
 
+        <Route path='/quizzes' component={Quizzes} >
+        </Route>
 
-          <Route path='/quizzes' component={Quizzes} >
-          </Route>
-
-         
-            <Route path='/quiz' component={Quiz} >
-            </Route>
-     
-          
+        <Route exact path="/pitch-quiz" component={PitchQuiz}>
+        </Route>
         
+        <Route exact path="/major-scales-and-key-signatures-quiz" component={MajorScalesAndKeySignaturesQuiz}>
+        </Route>
       </div>
 
     )
-    
+
   };
 }
 
